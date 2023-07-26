@@ -6,7 +6,7 @@
 #endif
 
 #ifndef DOCKER_GREETING
-	#define DOCKER_GREETING "Hello from kubedock!"
+	#define DOCKER_GREETING "Hello from Kubedock!"
 #endif
 
 #ifndef DOCKER_ARCH
@@ -20,12 +20,11 @@ const char message[] =
 	"\n"
 	"To generate this message, we took the following steps:\n"
 	" 1. The Podman client contacted the Kubedock daemon.\n"
-  " 2. The Kubedock daemon created a Pod using the Kubernetes API based on the \"" DOCKER_IMAGE "\""
-	" 3. A kubelet daemon on a cluster node pulled the \"" DOCKER_IMAGE "\" image from the container registry.\n"
-	"    (" DOCKER_ARCH ")\n"
+  " 2. The Kubedock daemon created a Kubernetes Pod.\n"
+	" 3. Kubelet pulled the \"" DOCKER_IMAGE "\" image from the container registry.\n"
 	" 4. The container runtime created a new container from that image which runs the\n"
 	"    executable that produces the output you are currently reading.\n"
-	" 4. Kubedock streamed that output to the Podman client, which sent it\n"
+	" 5. Kubedock streamed that output to the Podman client, which sent it\n"
 	"    to your terminal.\n"
 	"\n"
 	"To try something more ambitious, you can run an http server container with:\n"
